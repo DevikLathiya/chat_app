@@ -1,5 +1,6 @@
 import 'package:chat_app/core/utils/common/common_button.dart';
 import 'package:chat_app/module/auth_flow/screen/onboarding.dart';
+import 'package:chat_app/module/bottom_navigation/screen/bottom_navigation_screen.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: themeController.theme,
-        home: OnBoarding(),
+        home: BottomNavigationBarUI(),
         scrollBehavior: AppScrollBehavior(),
         initialBinding: RootBinding(),
       ),

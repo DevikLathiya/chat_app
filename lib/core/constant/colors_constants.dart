@@ -24,7 +24,10 @@ class ColorConstant {
   static Color get bottomSheetBackground => (themeController.isDarkTheme.value) ? const Color(0xFF323240) : const Color(0xFFFFFFFF);
 
 
-  static Color hintColor = const Color(0xFF959595);
-  static Color fillColor = const Color(0xFFF0F1F3B2);
-  static Color get homeScreenColor => (themeController.isDarkTheme.value) ? const Color(0xFF1C1C26) : Color(0xFFF4F4F4);
+  static Color hintColor =  Color(0xFF959595);
+  static Color fillColor =  Color(0xFFF0F1F3B2);
+  static Color f3f4f6Color =  Color(0xFFF3F4F6);
+  static Color e3E4BColor =  Color(0xFF3E3E4B);
+  static Color lightBlue =  Color(0xFFE0ECFF);
+  static Color get homeScreenColor => (themeController.isDarkTheme.value) ?  Color(0xFF1C1C26) : Color(0xFFF4F4F4);
 }

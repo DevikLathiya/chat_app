@@ -17,9 +17,18 @@ class ImageConstants {
   static const darkMale = "${basePath}dark_male.png";
   static const cake = "${basePath}cake.png";
 
+  /// bottom bar
   static const blockIcon = "${basePath}block_icon.png";
   static const profileIcon = "${basePath}profile_icon.png";
   static const home = "${basePath}home.png";
   static const fillProfile = "${basePath}fill_profile.png";
   static const fillBlock = "${basePath}fill_block.png";
+  static const favorite = "${basePath}favorite.png";
+
+  /// profile
+  static const add = "${basePath}add.png";
+  static const location = "${basePath}location.png";
+  static const gender = "${basePath}gender.png";
+  static const rightArrow = "${basePath}arrow_right.png";
+
 }

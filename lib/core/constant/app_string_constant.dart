@@ -14,4 +14,21 @@ class AppString {
   static const whatsYourGender = "What’s your gender?";
   static const whatsYourBirthDate = "What’s your birth date?";
 
+  /// profile
+  static const photosVideos = "Photos & Videos";
+  static const profile = "Profile";
+  static const about = "About";
+  static const gender = "Gender";
+  static const age = "Age";
+  static const ageRange = "Age range";
+  static const selectAgeRange = "Select Age Range";
+  static const location = "Location";
+  static const lookingFor = "Looking For";
+  static const selectYourGender = "Select Your Gender";
+  static const selectLookingGender = "Select the gender you are looking for";
+  static const birthday = "Birthday";
+  static const typeBirthdayDate = "Type Birthday Date";
+  static const language = "Language";
+  static const save = "Save";
+
 }

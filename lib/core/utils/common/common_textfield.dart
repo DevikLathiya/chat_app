@@ -25,7 +25,7 @@ class CommonSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 52.h,
+      height: 60.h,
       child: TextFormField(
         controller: controller,
         onChanged: onChanged,
@@ -39,12 +39,12 @@ class CommonSearchTextField extends StatelessWidget {
           errorStyle: TextStyle(fontSize: 0.sp, color: ColorConstant.transparent),
           hintText: hintText ?? "",
           hintStyle: Theme.of(context).lato400.copyWith(color: ColorConstant.hintColor, fontSize: 16.sp),
-          border: CommonProps.textFieldWhiteBorder(12.sp, fillColor),
-          disabledBorder: CommonProps.textFieldWhiteBorder(12.sp, fillColor),
-          enabledBorder: CommonProps.textFieldWhiteBorder(12.sp, fillColor),
-          errorBorder: CommonProps.textFieldWhiteBorder(12.sp, fillColor),
-          focusedBorder: CommonProps.textFieldWhiteBorder(12.sp, fillColor),
-          focusedErrorBorder: CommonProps.textFieldWhiteBorder(12.sp, fillColor),
+          border: CommonProps.textFieldWhiteBorder(12.sp, ColorConstant.grey.withOpacity(0.2)),
+          disabledBorder: CommonProps.textFieldWhiteBorder(12.sp, ColorConstant.grey.withOpacity(0.2)),
+          enabledBorder: CommonProps.textFieldWhiteBorder(12.sp, ColorConstant.grey.withOpacity(0.2)),
+          errorBorder: CommonProps.textFieldWhiteBorder(12.sp, ColorConstant.grey.withOpacity(0.2)),
+          focusedBorder: CommonProps.textFieldWhiteBorder(12.sp, ColorConstant.grey.withOpacity(0.2)),
+          focusedErrorBorder: CommonProps.textFieldWhiteBorder(12.sp, ColorConstant.grey.withOpacity(0.2)),
           prefixIcon: prefixIcon,
         ),
         cursorColor: ColorConstant.primary,

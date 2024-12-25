@@ -36,7 +36,7 @@ extension CustomThemeExtension on ThemeData {
 
   TextStyle get lato700 => TextStyle(fontFamily: Fonts.latoSemiBold, color: ColorConstant.appTxtColor);
 
-  TextStyle get lato600 => TextStyle(fontFamily: Fonts.latoRegular, color: ColorConstant.appTxtColor,fontWeight: FontWeight.w500);
+  TextStyle get lato600 => TextStyle(fontFamily: Fonts.latoRegular, color: ColorConstant.appTxtColor,fontWeight: FontWeight.w600);
 
   TextStyle get lato500 => TextStyle(fontFamily: Fonts.latoRegular, color: ColorConstant.appTxtColor,fontWeight: FontWeight.w500);
 

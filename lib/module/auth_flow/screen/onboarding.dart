@@ -51,7 +51,7 @@ class OnBoarding extends StatelessWidget {
                   // var cnt = Get.find<ThemeController>();
                   // cnt.changeTheme();
 
-                  dateDialog(controller,context);
+                  selectCountiesDialog(controller,context);
                   // enterNameDialog(controller,context);
                 },
                 child: Container(
@@ -153,11 +153,11 @@ class OnBoarding extends StatelessWidget {
                       style: Theme.of(context).lato700.copyWith(fontSize: 20.sp,color: ColorConstant.blackColor)
                   ),
                   20.h.verticalSpace,
-                  CommonSearchTextField(
+                  CommonTextField(
                     controller: controller.enterFirstName,
                     hintText: "Robert Smith",
                     fillColor: controller.themeController.isDarkTheme.value ? Colors.white.withOpacity(0.06) : ColorConstant.greyLite.withOpacity(0.7),
-                    prefixIcon: Image.asset(ImageConstants.user,scale: 3.5),
+                    prefix: Image.asset(ImageConstants.user,scale: 3.5),
                   ),
 
                 60.h.verticalSpace,
@@ -189,22 +189,6 @@ class OnBoarding extends StatelessWidget {
               children: [
 
                 _buildStepperRow(controller, context),
-
-                if(controller.isNameEntered.value && !controller.isGenderEntered.value && !controller.isDateEntered.value)
-                  Column(
-                    children: [
-                      Text(AppString.whatsYourFirstName,
-                          style: Theme.of(context).lato700.copyWith(fontSize: 20.sp,color: ColorConstant.blackColor)
-                      ),
-                      20.h.verticalSpace,
-                      CommonSearchTextField(
-                        controller: controller.enterFirstName,
-                        hintText: "Robert Smith",
-                        fillColor: controller.themeController.isDarkTheme.value ? Colors.white.withOpacity(0.06) : ColorConstant.greyLite.withOpacity(0.7),
-                        prefixIcon: Image.asset(ImageConstants.user,scale: 4),
-                      ),
-                    ],
-                  ),
 
                   Column(
                     children: [
