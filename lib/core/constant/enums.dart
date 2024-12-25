@@ -1,0 +1,2 @@
+enum ReleaseMode { local, live }
+
