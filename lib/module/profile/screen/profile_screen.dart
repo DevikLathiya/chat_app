@@ -410,23 +410,47 @@ class ProfileScreen extends StatelessWidget {
             CommonToast.toast(msg: "Select age range", gravity: ToastGravity.CENTER);
           }
         },
-        body: Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(AppString.ageRange, style: Theme.of(context).lato700.copyWith(fontSize: 20.sp, color: ColorConstant.blackColor)),
-              5.h.verticalSpace,
-              Text(AppString.selectAgeRange, style: Theme.of(context).lato400.copyWith(fontSize: 16.sp, color: ColorConstant.grey)),
-              28.h.verticalSpace,
-              Slider(
-                  value: controller.ageRange.value,
-                min: 18,max: 100,
-                onChanged: (value) => controller.ageRange.value = value,
-              ),
-              50.h.verticalSpace,
-            ],
-          ),
-        ));
+        body: Obx(() {
+          return Padding(
+            padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(AppString.ageRange, style: Theme.of(context).lato700.copyWith(fontSize: 20.sp, color: ColorConstant.blackColor)),
+                5.h.verticalSpace,
+                Text(AppString.selectAgeRange, style: Theme.of(context).lato400.copyWith(fontSize: 16.sp, color: ColorConstant.grey)),
+                28.h.verticalSpace,
+                Row(
+                  children: [
+                    Text("18", style: Theme.of(context).lato400.copyWith(fontSize: 16.sp, color: ColorConstant.grey)),
+                    Expanded(
+                      child: SliderTheme(
+                        data: SliderTheme.of(context).copyWith(
+                          trackShape: const RectangularSliderTrackShape(),
+                          trackHeight: 10.h,
+
+                          thumbColor: ColorConstant.primary,
+                        ),
+                        child: Slider(
+                          value: controller.ageRange.value,
+                          label: controller.ageRange.round().toString(),
+                          activeColor: ColorConstant.primary,
+                          inactiveColor: controller.themeController.isDarkTheme.value ?  ColorConstant.f3f4f6Color.withOpacity(0.10) :  ColorConstant.f3f4f6Color ,
+                          min: 18,max: 100,divisions: 88,
+                          onChanged: (value) {
+                            controller.ageRange.value = value;
+                          },
+                        ),
+                      ),
+                    ),
+                    Text("100", style: Theme.of(context).lato400.copyWith(fontSize: 16.sp, color: ColorConstant.grey)),
+                  ],
+                ),
+                50.h.verticalSpace,
+              ],
+            ),
+          );
+        },)
+    );
   }
 }
