@@ -29,5 +29,10 @@ class ColorConstant {
   static Color f3f4f6Color =  Color(0xFFF3F4F6);
   static Color e3E4BColor =  Color(0xFF3E3E4B);
   static Color lightBlue =  Color(0xFFE0ECFF);
+  static Color chatTileColor =  Color(0xFF22304D);
   static Color get homeScreenColor => (themeController.isDarkTheme.value) ?  Color(0xFF1C1C26) : Color(0xFFF4F4F4);
+
+  static Color chatTextFiled =  Color(0xFF323240);
+
+
 }

@@ -2,6 +2,7 @@ import 'package:chat_app/core/constant/app_theme.dart';
 import 'package:chat_app/core/constant/image_constants.dart';
 import 'package:chat_app/core/utils/common/common_textfield.dart';
 import 'package:chat_app/module/bottom_navigation/controller/bottom_navigation_controller.dart';
+import 'package:chat_app/module/home/screen/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -53,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                                 color: ColorConstant.primary,
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.asset(ImageConstants.favorite, height: 16.h, width: 16.w),
+                              child: Image.asset(ImageConstants.favoriteFill, height: 16.h, width: 16.w),
                             ),
                           ],
                         ).paddingSymmetric(horizontal: 20.w),
@@ -75,33 +76,38 @@ class HomeScreen extends StatelessWidget {
                       child: ListView.separated(
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
-                          return ListTile(
-                            tileColor: controller.themeController.isDarkTheme.value ? Colors.white.withOpacity(0.08) : ColorConstant.white,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
-                            title: Text(
-                              "Theresa Webb",
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context).lato400.copyWith(fontSize: 16.sp, color: ColorConstant.blackColor),
-                            ).paddingOnly(bottom: 7.h),
-                            subtitle: Text(
-                              "Hey !!! Theresa Webb",
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context)
-                                  .lato400
-                                  .copyWith(fontSize: 14.sp, color: controller.themeController.isDarkTheme.value ? ColorConstant.hintColor : ColorConstant.grey),
-                            ),
-                            trailing: Column(children: [
-                              Text(
-                                "10:35 PM",
+                          return GestureDetector(
+                            onTap: () {
+                              Get.to(ChatScreen());
+                            },
+                            child: ListTile(
+                              tileColor: controller.themeController.isDarkTheme.value ? Colors.white.withOpacity(0.08) : ColorConstant.white,
+                              contentPadding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
+                              title: Text(
+                                "Theresa Webb",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context).lato400.copyWith(fontSize: 16.sp, color: ColorConstant.blackColor),
+                              ).paddingOnly(bottom: 7.h),
+                              subtitle: Text(
+                                "Hey !!! Theresa Webb",
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                                 style: Theme.of(context)
                                     .lato400
-                                    .copyWith(fontSize: 12.sp, color: controller.themeController.isDarkTheme.value ? ColorConstant.hintColor : ColorConstant.grey),
-                              )
-                            ]),
-                            leading: ClipOval(child: Container(color: ColorConstant.greyLite, child: Image.asset(ImageConstants.getStarted, height: 50.w, width: 50.w))),
+                                    .copyWith(fontSize: 14.sp, color: controller.themeController.isDarkTheme.value ? ColorConstant.hintColor : ColorConstant.grey),
+                              ),
+                              trailing: Column(children: [
+                                Text(
+                                  "10:35 PM",
+                                  style: Theme.of(context)
+                                      .lato400
+                                      .copyWith(fontSize: 12.sp, color: controller.themeController.isDarkTheme.value ? ColorConstant.hintColor : ColorConstant.grey),
+                                )
+                              ]),
+                              leading: ClipOval(child: Container(color: ColorConstant.greyLite, child: Image.asset(ImageConstants.getStarted, height: 50.w, width: 50.w))),
+                            ),
                           );
                         },
                         separatorBuilder: (context, index) => 16.h.verticalSpace,
@@ -112,33 +118,5 @@ class HomeScreen extends StatelessWidget {
                 ],
               ));
         });
-  }
-}
-
-class HomeScreen1 extends StatelessWidget {
-  const HomeScreen1({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorConstant.homeScreenColor,
-      body: Center(
-        child: Text("0000"),
-      ),
-    );
-  }
-}
-
-class HomeScreen2 extends StatelessWidget {
-  const HomeScreen2({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorConstant.homeScreenColor,
-      body: Center(
-        child: Text("22222"),
-      ),
-    );
   }
 }

@@ -31,4 +31,9 @@ class AppString {
   static const language = "Language";
   static const save = "Save";
 
+  /// chat screen
+  static const blockedUser = "Blocked User";
+  static const unblock = "Unblock";
+  static const online = "Online";
+
 }

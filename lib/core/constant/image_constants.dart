@@ -23,12 +23,23 @@ class ImageConstants {
   static const home = "${basePath}home.png";
   static const fillProfile = "${basePath}fill_profile.png";
   static const fillBlock = "${basePath}fill_block.png";
-  static const favorite = "${basePath}favorite.png";
+  static const favoriteFill = "${basePath}favorite_fill.png";
 
   /// profile
   static const add = "${basePath}add.png";
   static const location = "${basePath}location.png";
   static const gender = "${basePath}gender.png";
   static const rightArrow = "${basePath}arrow_right.png";
+
+  //chat
+  static const arrowLeft = "${basePath}arrow_left.png";
+  static const favorite = "${basePath}favorite.png";
+  static const more = "${basePath}more.png";
+  static const send = "${basePath}send.png";
+
+
+
+
+  static const dummy = "${basePath}AAAAAAA.png";
 
 }
