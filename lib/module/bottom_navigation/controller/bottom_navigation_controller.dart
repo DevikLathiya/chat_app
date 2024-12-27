@@ -26,7 +26,7 @@ class DashboardScreenController extends GetxController {
 
   RxBool isOnline = RxBool(false);
   RxBool isMessageDelete = RxBool(false);
-  RxBool dataLoad = RxBool(true);
+  RxBool dataLoad = RxBool(false);
   RxBool isImageLoad= RxBool(false);
 
   RxInt skip = RxInt(0);
@@ -42,6 +42,7 @@ class DashboardScreenController extends GetxController {
     // scrollController = ScrollController();
     // scrollController.addListener(_scrollListener);
     // update();
+    addDummyData();
   }
   scrollListener() async {
     if (scrollController.position.pixels == scrollController.position.maxScrollExtent) {
@@ -151,7 +152,7 @@ class DashboardScreenController extends GetxController {
             ),
           ],
         ),
-        message: "Let's catch up this weekend.",
+        message: "Let's catch up this weekend."*3,
         createdAt: "2024-12-18T15:20:00Z",
         updatedAt: DateTime.now(),
         seen: ["123"],
@@ -211,10 +212,70 @@ class DashboardScreenController extends GetxController {
             ),
           ],
         ),
+        message: "Good morning!"*3,
+        createdAt: "2024-12-16T07:00:00Z",
+        updatedAt: DateTime.now(),
+        seen: ["789"],
+      ),
+      GetMessageData(
+        id: "5",
+        senderId: "456",
+        receiverId: "789",
+        roomId: RoomId(
+          id: "room5",
+          chatName: "Chat Room 5",
+          isGroupChat: true,
+          users: [
+            GetMessageUser(
+              id: "456",
+              firstName: "Jane",
+              lastName: "Doe",
+              userName: "janedoe",
+              profilePic: "https://example.com/profile2.png",
+            ),
+            GetMessageUser(
+              id: "789",
+              firstName: "Alice",
+              lastName: "Smith",
+              userName: "alicesmith",
+              profilePic: "https://example.com/profile3.png",
+            ),
+          ],
+        ),
         message: "Good morning!",
         createdAt: "2024-12-16T07:00:00Z",
         updatedAt: DateTime.now(),
         seen: ["789"],
+      ),
+      GetMessageData(
+        id: "4",
+        senderId: "123",
+        receiverId: "789",
+        roomId: RoomId(
+          id: "room4",
+          chatName: "Chat Room 4",
+          isGroupChat: false,
+          users: [
+            GetMessageUser(
+              id: "123",
+              firstName: "John",
+              lastName: "Doe",
+              userName: "johndoe",
+              profilePic: "https://example.com/profile1.png",
+            ),
+            GetMessageUser(
+              id: "789",
+              firstName: "Alice",
+              lastName: "Smith",
+              userName: "alicesmith",
+              profilePic: "https://example.com/profile3.png",
+            ),
+          ],
+        ),
+        message: "See you at the event!",
+        createdAt: "2024-12-17T09:10:00Z",
+        updatedAt: DateTime.now(),
+        seen: [],
       ),
     ]);
   }

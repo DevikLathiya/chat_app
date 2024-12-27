@@ -42,8 +42,8 @@ class BottomNavigationBarUI extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       controller.currentIndex.value = 0;
-                      var cnt = Get.find<ThemeController>();
-                      cnt.changeTheme();
+                      // var cnt = Get.find<ThemeController>();
+                      // cnt.changeTheme();
                     },
                     child: Column(
                       mainAxisSize: MainAxisSize.min,

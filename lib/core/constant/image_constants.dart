@@ -36,6 +36,9 @@ class ImageConstants {
   static const favorite = "${basePath}favorite.png";
   static const more = "${basePath}more.png";
   static const send = "${basePath}send.png";
+  static const camera = "${basePath}camera.png";
+  static const document = "${basePath}document.png";
+  static const emoji = "${basePath}emoji.png";
 
 
 
